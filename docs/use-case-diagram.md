@@ -49,3 +49,7 @@ flowchart LR
 ## 4. Description
 
 The user creates and configures a DFA by defining its states, alphabet, initial state, accepting states and transitions. The user can inspect the generated transition table, validate the automaton, enter an input string and start simulation. The application then presents the execution trace and final result.
+
+## 5. UML Source
+
+A standard UML use-case diagram source is also provided in [`use-case-diagram.puml`](use-case-diagram.puml). It can be rendered with a PlantUML-compatible renderer.
