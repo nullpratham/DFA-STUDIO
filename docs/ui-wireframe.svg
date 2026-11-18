@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <style>
+    .panel{fill:#fff;stroke:#40566f;stroke-width:2;rx:12}
+    .heading{font: bold 20px Arial,sans-serif;fill:#17365d}
+    .body{font: 15px Arial,sans-serif;fill:#263746}
+    .muted{font: 13px Arial,sans-serif;fill:#526579}
+    .button{fill:#edf3f8;stroke:#7890a8;stroke-width:1.2;rx:6}
+    .node{fill:#fff;stroke:#243f5b;stroke-width:2.5}
+    .line{fill:none;stroke:#243f5b;stroke-width:2;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#243f5b"/></marker></defs>
+  <rect width="1200" height="760" fill="#f7f9fc"/>
+  <text x="35" y="38" class="heading" font-size="26">DFA Studio — Proposed Interface Wireframe</text>
+  <rect x="30" y="58" width="1140" height="70" class="panel"/>
+  <text x="55" y="99" class="heading" font-size="25">DFA Studio</text>
+  <text x="355" y="99" class="body">Interactive DFA Designer &amp; Simulator</text>
+  <rect x="850" y="77" width="90" height="34" class="button"/><text x="870" y="99" class="body">New DFA</text>
+  <rect x="950" y="77" width="100" height="34" class="button"/><text x="963" y="99" class="body">Load Example</text>
+  <rect x="1060" y="77" width="85" height="34" class="button"/><text x="1077" y="99" class="body">Reset</text>
+
+  <rect x="30" y="150" width="280" height="390" class="panel"/>
+  <text x="52" y="185" class="heading">1. DFA Configuration</text>
+  <text x="52" y="225" class="body">States</text><rect x="52" y="238" width="210" height="34" class="button"/><text x="64" y="261" class="body">q0   q1   + Add state</text>
+  <text x="52" y="302" class="body">Alphabet</text><rect x="52" y="315" width="210" height="34" class="button"/><text x="64" y="338" class="body">0    1    + Add symbol</text>
+  <text x="52" y="380" class="body">Initial state</text><rect x="52" y="393" width="210" height="34" class="button"/><text x="64" y="416" class="body">q0                         v</text>
+  <text x="52" y="458" class="body">Accepting states</text><text x="65" y="486" class="body">[ ] q0       [x] q1</text>
+  <text x="52" y="520" class="muted">Transitions configured below / in table</text>
+
+  <rect x="330" y="150" width="530" height="390" class="panel"/>
+  <text x="352" y="185" class="heading">2. State Transition Diagram</text>
+  <text x="352" y="211" class="muted">Graphical representation of states and labelled transitions</text>
+  <circle cx="485" cy="355" r="46" class="node"/><text x="467" y="362" class="body">q0</text>
+  <circle cx="710" cy="355" r="46" class="node"/><circle cx="710" cy="355" r="38" fill="none" stroke="#243f5b" stroke-width="1.5"/><text x="692" y="362" class="body">q1</text>
+  <path d="M415 355 L437 355" class="line"/><text x="375" y="342" class="muted">start</text>
+  <path d="M530 324 Q600 260 665 324" class="line"/><text x="590" y="278" class="body">1</text>
+  <path d="M665 390 Q600 455 530 390" class="line"/><text x="590" y="450" class="body">0</text>
+  <path d="M455 314 C405 250 520 235 505 310" class="line"/><text x="465" y="247" class="body">0</text>
+  <path d="M680 310 C650 235 765 235 740 310" class="line"/><text x="705" y="247" class="body">1</text>
+  <text x="370" y="500" class="muted">Single circle: state    Double circle: accepting state</text>
+
+  <rect x="880" y="150" width="290" height="390" class="panel"/>
+  <text x="902" y="185" class="heading">3. Simulation</text>
+  <text x="902" y="230" class="body">Input string</text><rect x="902" y="244" width="245" height="38" class="button"/><text x="918" y="269" class="body">1011</text>
+  <rect x="902" y="300" width="110" height="38" class="button"/><text x="925" y="325" class="body">Validate DFA</text>
+  <rect x="1022" y="300" width="125" height="38" class="button"/><text x="1060" y="325" class="body">Run</text>
+  <rect x="902" y="357" width="72" height="36" class="button"/><text x="922" y="381" class="body">Step</text>
+  <rect x="982" y="357" width="72" height="36" class="button"/><text x="1000" y="381" class="body">Play</text>
+  <rect x="1062" y="357" width="85" height="36" class="button"/><text x="1070" y="381" class="body">Reset</text>
+  <text x="902" y="445" class="muted">Current state: q1</text>
+  <text x="902" y="475" class="muted">Progress: 3 / 4 symbols</text>
+
+  <rect x="330" y="560" width="840" height="85" class="panel"/>
+  <text x="352" y="592" class="heading">4. Execution Trace</text>
+  <text x="352" y="620" class="body">Start q0  →  read 1: q1  →  read 0: q0  →  read 1: q1  →  read 1: q1</text>
+  <rect x="30" y="665" width="1140" height="65" class="panel"/>
+  <text x="52" y="695" class="heading">5. Result</text>
+  <text x="230" y="695" class="body">ACCEPTED — final state q1 belongs to the accepting-state set.</text>
+  <text x="52" y="718" class="muted">Validation and invalid-input feedback will be displayed in this area when applicable.</text>
+</svg>
